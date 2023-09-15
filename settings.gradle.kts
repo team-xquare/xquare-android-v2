@@ -25,6 +25,9 @@ include(":core:core-datastore")
 include(":core:core-jwt")
 include(":core:core-network")
 
+// data
+include(":data:data-meal")
+
 // domain
 include(":domain:domain-meal")
 include(":domain:domain-user")
