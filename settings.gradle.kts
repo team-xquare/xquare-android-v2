@@ -35,6 +35,7 @@ include(":database:database-user")
 
 // datastore
 include(":datastore:datastore-meal")
+include(":datastore:datastore-user")
 
 // domain
 include(":domain:domain-meal")
