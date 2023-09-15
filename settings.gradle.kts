@@ -27,6 +27,7 @@ include(":core:core-network")
 
 // data
 include(":data:data-meal")
+include(":data:data-user")
 
 // domain
 include(":domain:domain-meal")
