@@ -26,4 +26,5 @@ include(":core:core-jwt")
 include(":core:core-network")
 
 // domain
+include(":domain:domain-meal")
 include(":domain:domain-user")
