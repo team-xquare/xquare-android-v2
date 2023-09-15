@@ -43,3 +43,4 @@ include(":domain:domain-user")
 
 // network
 include(":network:network-meal")
+include(":network:network-user")
