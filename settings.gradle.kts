@@ -41,6 +41,9 @@ include(":datastore:datastore-user")
 include(":domain:domain-meal")
 include(":domain:domain-user")
 
+// feature
+include(":feature:feature-auth")
+
 // network
 include(":network:network-meal")
 include(":network:network-user")
