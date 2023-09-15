@@ -18,3 +18,4 @@ dependencyResolutionManagement {
 rootProject.name = "XQUARE Android v2"
 include(":app")
 include(":core:core-database")
+include(":core:core-datastore")
