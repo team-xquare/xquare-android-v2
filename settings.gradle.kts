@@ -40,3 +40,6 @@ include(":datastore:datastore-user")
 // domain
 include(":domain:domain-meal")
 include(":domain:domain-user")
+
+// network
+include(":network:network-meal")
