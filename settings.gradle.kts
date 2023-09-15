@@ -31,6 +31,7 @@ include(":data:data-user")
 
 // database
 include(":database:database-meal")
+include(":database:database-user")
 
 // domain
 include(":domain:domain-meal")
