@@ -43,6 +43,7 @@ include(":domain:domain-user")
 
 // feature
 include(":feature:feature-auth")
+include(":feature:feature-home")
 
 // network
 include(":network:network-meal")
