@@ -48,3 +48,6 @@ include(":feature:feature-home")
 // network
 include(":network:network-meal")
 include(":network:network-user")
+
+// shared
+include(":shared:shared-date")
