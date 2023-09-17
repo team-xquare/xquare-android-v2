@@ -9,8 +9,8 @@ espresso-core = "3.5.1"
 appcompat = "1.6.1"
 material = "1.9.0"
 constraintlayout = "2.1.4"
-navigation-fragment-ktx = "2.7.1"
-navigation-ui-ktx = "2.7.1"
+navigation-fragment-ktx = "2.7.2"
+navigation-ui-ktx = "2.7.2"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
