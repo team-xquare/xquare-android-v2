@@ -52,4 +52,3 @@ include(":network:network-user")
 // shared
 include(":shared:shared-alias")
 include(":shared:shared-date")
-include(":shared:shared-gradle")
