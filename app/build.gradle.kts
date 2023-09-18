@@ -67,20 +67,25 @@ dependencies {
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
-    implementation(project(":database:database-user"))
-    implementation(project(":datastore:datastore-user"))
-    implementation(project(":datastore:datastore-meal"))
-    implementation(project(":network:network-meal"))
     implementation(project(":core:core-database"))
-    implementation(project(":domain:domain-meal"))
     implementation(project(":core:core-datastore"))
-    implementation(project(":shared:shared-alias"))
+    implementation(project(":core:core-jwt"))
+    implementation(project(":core:core-network"))
+
     implementation(project(":data:data-meal"))
     implementation(project(":data:data-user"))
-    implementation(project(":shared:shared-date"))
-    implementation(project(":core:core-network"))
+
+    implementation(project(":database:database-user"))
     implementation(project(":database:database-meal"))
+    implementation(project(":datastore:datastore-user"))
+    implementation(project(":datastore:datastore-meal"))
+
     implementation(project(":domain:domain-user"))
-    implementation(project(":core:core-jwt"))
+    implementation(project(":domain:domain-meal"))
+
+    implementation(project(":network:network-meal"))
     implementation(project(":network:network-user"))
+
+    implementation(project(":shared:shared-alias"))
+    implementation(project(":shared:shared-date"))
 }
