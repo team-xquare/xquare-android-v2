@@ -14,10 +14,15 @@ material = "1.9.0"
 constraintlayout = "2.1.4"
 navigation-fragment-ktx = "2.7.2"
 navigation-ui-ktx = "2.7.2"
+room = "2.5.2"
 xquare-designSystem-android = "v0.4.0"
 ksp = "1.8.21-1.0.11"
 
 [libraries]
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+androidx-room-testing = { module = "androidx.room:room-testing", version.ref = "room" }
 datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
