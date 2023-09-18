@@ -1,5 +1,6 @@
 [versions]
 agp = "8.2.0-alpha16"
+datastorePreferences = "1.0.0"
 koin = "3.5.0"
 kotlin = "1.8.21"
 core-ktx = "1.12.0"
@@ -16,6 +17,7 @@ navigation-ui-ktx = "2.7.2"
 xquare-designSystem-android = "v0.4.0"
 
 [libraries]
+datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
