@@ -44,6 +44,7 @@ dependencies {
 
     implementation(project(":core:core-datastore"))
     implementation(project(":core:core-network"))
+
     implementation(project(":shared:shared-alias"))
     implementation(project(":shared:shared-date"))
 }
