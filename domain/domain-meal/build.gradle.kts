@@ -41,4 +41,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    implementation(project(":data:data-meal"))
+
+    implementation(project(":shared:shared-alias"))
+    implementation(project(":shared:shared-date"))
 }
