@@ -1,6 +1,6 @@
 [versions]
 agp = "8.2.0-alpha16"
-datastorePreferences = "1.0.0"
+datastore-preferences = "1.0.0"
 koin = "3.5.0"
 kotlin = "1.8.21"
 core-ktx = "1.12.0"
@@ -10,20 +10,30 @@ espresso-core = "3.5.1"
 appcompat = "1.6.1"
 kotlinx-serialization-json = "1.5.1"
 ktor = "2.3.4"
+lifecycle = "2.6.2"
 material = "1.9.0"
 constraintlayout = "2.1.4"
+material-compose = "1.1.1"
 navigation-fragment-ktx = "2.7.2"
 navigation-ui-ktx = "2.7.2"
 room = "2.5.2"
+compose = "1.5.1"
 xquare-designSystem-android = "v0.4.0"
 ksp = "1.8.21-1.0.11"
 
 [libraries]
+androidx-animation = { module = "androidx.compose.animation:animation", version.ref = "compose" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+androidx-compose-material = { module = "androidx.compose.material3:material3", version.ref = "material-compose" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
 androidx-room-testing = { module = "androidx.room:room-testing", version.ref = "room" }
-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
+androidx-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
+datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore-preferences" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
