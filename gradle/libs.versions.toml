@@ -18,7 +18,7 @@ navigation-fragment-ktx = "2.7.2"
 navigation-ui-ktx = "2.7.2"
 room = "2.5.2"
 compose = "1.5.1"
-xquare-designSystem-android = "v0.4.0"
+xquare-designSystem-android = "0.4.1"
 ksp = "1.8.21-1.0.11"
 
 [libraries]
