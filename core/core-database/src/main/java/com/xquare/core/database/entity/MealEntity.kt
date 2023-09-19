@@ -6,8 +6,8 @@ import androidx.room.PrimaryKey
 import com.xquare.shared.alias.Dish
 import org.joda.time.LocalDate
 
-@Entity
-internal data class MealEntity(
+@Entity(tableName = "tbl_meal")
+data class MealEntity(
     @PrimaryKey @ColumnInfo("date") val date: LocalDate,
     @ColumnInfo("breakfast") val breakfast: List<Dish>,
     @ColumnInfo("kcal_breakfast") val kcalOfBreakfast: List<Dish>,
