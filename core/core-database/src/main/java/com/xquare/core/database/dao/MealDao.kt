@@ -6,6 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.xquare.core.database.entity.MealEntity
+import kotlinx.coroutines.flow.Flow
 import org.joda.time.LocalDate
 
 @Dao
@@ -16,7 +17,7 @@ abstract class MealDao {
             SELECT * FROM tbl_meal;
         """,
     )
-    abstract fun findAll(): MealEntity
+    abstract fun findAll(): Flow<List<MealEntity>>
 
     @Query(
         """
@@ -24,7 +25,7 @@ abstract class MealDao {
             WHERE date = :date;
         """,
     )
-    abstract fun findByDate(date: LocalDate): MealEntity
+    abstract fun findByDate(date: LocalDate): Flow<MealEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     abstract fun upsert(vararg meals: MealEntity)
