@@ -45,6 +45,8 @@ dependencies {
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
+    implementation(project(":core:core-domain"))
+
     implementation(project(":data:data-user"))
 
     implementation(project(":shared:shared-date"))
