@@ -21,6 +21,7 @@ rootProject.name = "XQUARE Android v2"
 include(":app")
 
 // core
+include(":core:core-data")
 include(":core:core-database")
 include(":core:core-datastore")
 include(":core:core-domain")
