@@ -1,11 +1,12 @@
 package com.xquare.core.network
 
+import com.xquare.core.di.DiQualifier
 import io.ktor.client.HttpClient
 import org.koin.core.module.Module
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
-object NetworkDiQualifier {
+object NetworkDiQualifier : DiQualifier() {
     val HTTP_CLIENT_DEFAULT = named("http-client-default")
     val HTTP_CLIENT_DEBUG = named("http-client-debug")
 }
