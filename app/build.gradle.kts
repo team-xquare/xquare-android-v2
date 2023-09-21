@@ -87,8 +87,12 @@ dependencies {
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
+    implementation(project(":core:core-data"))
     implementation(project(":core:core-database"))
+    implementation(project(":core:core-datasource"))
     implementation(project(":core:core-datastore"))
+    implementation(project(":core:core-di"))
+    implementation(project(":core:core-domain"))
     implementation(project(":core:core-jwt"))
     implementation(project(":core:core-network"))
 
