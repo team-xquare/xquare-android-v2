@@ -1,7 +1,7 @@
 package com.xquare.database.meal.datasource
 
-import com.xquare.core.database.dao.meal.MealDao
+import com.xquare.database.meal.service.MealDatabaseService
 
 internal class MealDatabaseDataSourceImpl(
-    private val mealDao: MealDao,
+    private val mealDatabaseService: MealDatabaseService,
 ) : MealDatabaseDataSource()
