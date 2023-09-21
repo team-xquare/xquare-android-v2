@@ -40,11 +40,18 @@ dependencies {
 
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
-    implementation(libs.material)
+
+    implementation(libs.datastore.preferences)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
+    implementation(libs.koin.android)
+    implementation(libs.koin.android.compat)
+    testImplementation(libs.koin.android.test)
+
+    implementation(project(":core:core-datasource"))
     implementation(project(":core:core-datastore"))
 
     implementation(project(":shared:shared-date"))

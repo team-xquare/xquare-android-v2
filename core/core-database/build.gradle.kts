@@ -57,6 +57,7 @@ dependencies {
     testImplementation(libs.koin.android.test)
 
     implementation(project(":core:core-data"))
+    implementation(project(":core:core-datasource"))
 
     implementation(project(":shared:shared-date"))
     implementation(project(":shared:shared-alias"))

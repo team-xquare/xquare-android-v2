@@ -40,11 +40,22 @@ dependencies {
 
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
-    implementation(libs.material)
+
+    implementation(libs.kotlinx.serialization.json)
+
+    implementation(libs.koin.android)
+    implementation(libs.koin.android.compat)
+    testImplementation(libs.koin.android.test)
+
+    implementation(libs.ktor.client.android)
+    implementation(libs.ktor.client.serialization)
+    implementation(libs.ktor.serialization.kotlinx.json)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
+    implementation(project(":core:core-datasource"))
     implementation(project(":core:core-network"))
 
     implementation(project(":shared:shared-date"))
