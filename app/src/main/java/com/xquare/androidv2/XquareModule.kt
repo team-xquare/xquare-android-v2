@@ -3,6 +3,7 @@ package com.xquare.androidv2
 import com.xquare.core.database.coreDatabaseModule
 import com.xquare.core.datastore.coreDataStoreModule
 import com.xquare.core.network.coreNetworkModule
+import com.xquare.data.meal.dataMealModule
 import com.xquare.database.meal.databaseMealModule
 import com.xquare.datastore.meal.dataStoreMealModule
 import com.xquare.network.meal.networkMealModule
@@ -32,7 +33,9 @@ private val coreModule: Module
 
 private val dataModule: Module
     inline get() = module {
-        includes()
+        includes(
+            dataMealModule,
+        )
     }
 
 private val databaseModule: Module
