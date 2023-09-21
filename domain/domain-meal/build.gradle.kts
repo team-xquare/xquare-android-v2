@@ -40,11 +40,16 @@ dependencies {
 
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
-    implementation(libs.material)
+
     implementation(libs.joda.android)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    implementation(libs.koin.android)
+    implementation(libs.koin.android.compat)
+    testImplementation(libs.koin.android.test)
 
     implementation(project(":core:core-data"))
     implementation(project(":core:core-domain"))
