@@ -49,7 +49,8 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
     implementation(libs.koin.android)
-    implementation(libs.koin.android.test)
+    implementation(libs.koin.android.compat)
+    testImplementation(libs.koin.android.test)
 
     implementation(project(":core:core-data"))
 
