@@ -1,3 +1,3 @@
 package com.xquare.core.datasource
 
-interface Service
+abstract class Service
