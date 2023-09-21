@@ -1,7 +1,7 @@
 package com.xquare.datastore.meal.datasource
 
-import com.xquare.core.datastore.PreferencesDataStore
+import com.xquare.datastore.meal.service.MealDataStoreService
 
 internal class MealDataStoreDataSourceImpl(
-    private val dataStore: PreferencesDataStore,
+    private val mealDataStoreService: MealDataStoreService,
 ) : MealDataStoreDataSource()
