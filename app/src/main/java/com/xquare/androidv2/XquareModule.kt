@@ -6,6 +6,7 @@ import com.xquare.core.network.coreNetworkModule
 import com.xquare.data.meal.dataMealModule
 import com.xquare.database.meal.databaseMealModule
 import com.xquare.datastore.meal.dataStoreMealModule
+import com.xquare.domain.meal.domainMealModule
 import com.xquare.network.meal.networkMealModule
 import org.koin.core.module.Module
 import org.koin.dsl.module
@@ -54,7 +55,9 @@ private val dataStoreModule: Module
 
 private val domainModule: Module
     inline get() = module {
-        includes()
+        includes(
+            domainMealModule,
+        )
     }
 
 private val networkModule: Module
