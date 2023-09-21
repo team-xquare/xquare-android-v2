@@ -23,6 +23,7 @@ include(":app")
 // core
 include(":core:core-data")
 include(":core:core-database")
+include(":core:core-datasource")
 include(":core:core-datastore")
 include(":core:core-domain")
 include(":core:core-jwt")
