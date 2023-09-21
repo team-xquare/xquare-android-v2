@@ -1,6 +1,7 @@
 package com.xquare.androidv2
 
 import com.xquare.core.database.coreDatabaseModule
+import com.xquare.core.datastore.coreDataStoreModule
 import org.koin.core.module.Module
 import org.koin.dsl.module
 
@@ -18,7 +19,10 @@ internal val xquareModule: Module
 
 private val coreModule: Module
     inline get() = module {
-        includes(coreDatabaseModule)
+        includes(
+            coreDatabaseModule,
+            coreDataStoreModule,
+        )
     }
 
 private val dataModule: Module
