@@ -1,3 +1,7 @@
 package com.xquare.network.meal.service
 
-internal class MealNetworkServiceImpl : MealNetworkService()
+import io.ktor.client.HttpClient
+
+internal class MealNetworkServiceImpl (
+    private val httpClient: HttpClient,
+): MealNetworkService()
