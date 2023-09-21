@@ -21,8 +21,11 @@ rootProject.name = "XQUARE Android v2"
 include(":app")
 
 // core
+include(":core:core-data")
 include(":core:core-database")
+include(":core:core-datasource")
 include(":core:core-datastore")
+include(":core:core-domain")
 include(":core:core-jwt")
 include(":core:core-network")
 
@@ -52,4 +55,5 @@ include(":network:network-user")
 
 // shared
 include(":shared:shared-alias")
+include(":shared:shared-base")
 include(":shared:shared-date")
