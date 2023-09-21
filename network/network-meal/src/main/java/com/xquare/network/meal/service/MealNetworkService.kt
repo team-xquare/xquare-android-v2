@@ -1,4 +1,4 @@
-package com.xquare.network.meal
+package com.xquare.network.meal.service
 
 import com.xquare.core.network.NetworkService
 
