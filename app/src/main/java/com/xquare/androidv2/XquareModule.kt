@@ -2,6 +2,7 @@ package com.xquare.androidv2
 
 import com.xquare.core.database.coreDatabaseModule
 import com.xquare.core.datastore.coreDataStoreModule
+import com.xquare.core.network.coreNetworkModule
 import org.koin.core.module.Module
 import org.koin.dsl.module
 
@@ -22,6 +23,7 @@ private val coreModule: Module
         includes(
             coreDatabaseModule,
             coreDataStoreModule,
+            coreNetworkModule,
         )
     }
 

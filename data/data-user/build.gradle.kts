@@ -45,6 +45,10 @@ dependencies {
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
+    implementation(libs.koin.android)
+    implementation(libs.koin.android.compat)
+    testImplementation(libs.koin.android.test)
+
     implementation(project(":database:database-user"))
 
     implementation(project(":datastore:datastore-user"))
