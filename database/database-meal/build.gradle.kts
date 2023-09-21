@@ -46,6 +46,7 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
     implementation(project(":core:core-database"))
+    implementation(project(":core:core-datasource"))
 
     implementation(project(":shared:shared-alias"))
     implementation(project(":shared:shared-date"))
