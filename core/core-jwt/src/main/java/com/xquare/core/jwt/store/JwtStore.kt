@@ -6,8 +6,8 @@ import com.xquare.core.jwt.RefreshToken
 import com.xquare.core.jwt.RefreshTokenExpiration
 
 internal abstract class JwtStore {
-    abstract suspend fun loadAccessToken(): AccessToken
-    abstract suspend fun loadAccessTokenExpiration(): AccessTokenExpiration
-    abstract suspend fun loadRefreshToken(): RefreshToken
-    abstract suspend fun loadRefreshTokenExpiration(): RefreshTokenExpiration
+    abstract fun loadAccessToken(): AccessToken
+    abstract fun loadAccessTokenExpiration(): AccessTokenExpiration
+    abstract fun loadRefreshToken(): RefreshToken
+    abstract fun loadRefreshTokenExpiration(): RefreshTokenExpiration
 }
