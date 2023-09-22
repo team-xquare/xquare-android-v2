@@ -96,6 +96,7 @@ dependencies {
     implementation(project(":core:core-domain"))
     implementation(project(":core:core-jwt"))
     implementation(project(":core:core-network"))
+    implementation(project(":core:core-project"))
 
     implementation(project(":data:data-meal"))
     implementation(project(":data:data-user"))
