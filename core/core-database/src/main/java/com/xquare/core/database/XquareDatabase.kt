@@ -13,6 +13,7 @@ import com.xquare.core.database.entity.MealEntity
         MealEntity::class,
     ],
     version = 0,
+    exportSchema = false,
 )
 @TypeConverters(
     DateTypeConverters::class,
