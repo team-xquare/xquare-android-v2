@@ -4,6 +4,7 @@ import com.xquare.core.database.coreDatabaseModule
 import com.xquare.core.datastore.coreDataStoreModule
 import com.xquare.core.jwt.coreJwtModule
 import com.xquare.core.network.coreNetworkModule
+import com.xquare.core.project.coreProjectModule
 import com.xquare.data.meal.dataMealModule
 import com.xquare.database.meal.databaseMealModule
 import com.xquare.datastore.meal.dataStoreMealModule
@@ -31,6 +32,7 @@ private val coreModule: Module
             coreDataStoreModule,
             coreJwtModule,
             coreNetworkModule,
+            coreProjectModule,
         )
     }
 
