@@ -2,6 +2,7 @@ package com.xquare.androidv2
 
 import com.xquare.core.database.coreDatabaseModule
 import com.xquare.core.datastore.coreDataStoreModule
+import com.xquare.core.jwt.coreJwtModule
 import com.xquare.core.network.coreNetworkModule
 import com.xquare.data.meal.dataMealModule
 import com.xquare.database.meal.databaseMealModule
@@ -28,6 +29,7 @@ private val coreModule: Module
         includes(
             coreDatabaseModule,
             coreDataStoreModule,
+            coreJwtModule,
             coreNetworkModule,
         )
     }
