@@ -12,37 +12,37 @@ import com.xquare.core.jwt.exception.AccessTokenNotFoundException
 import com.xquare.core.jwt.exception.RefreshTokenExpirationNotFoundException
 import com.xquare.core.jwt.exception.RefreshTokenNotFoundException
 import com.xquare.shared.date.toLocalDateTime
-import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 
 internal class JwtStoreImpl(
     private val preferencesDataStore: PreferencesDataStore,
 ) : JwtStore() {
-    override fun loadAccessToken(): Flow<AccessToken> =
+    override suspend fun loadAccessToken(): AccessToken =
         preferencesDataStore.data.map { preferences ->
             preferences[ACCESS_TOKEN] ?: throw AccessTokenNotFoundException()
-        }
+        }.first()
 
-    override fun loadAccessTokenExpiration(): Flow<AccessTokenExpiration> =
+    override suspend fun loadAccessTokenExpiration(): AccessTokenExpiration =
         preferencesDataStore.data.map { preferences ->
             val longValue = preferences[ACCESS_TOKEN_EXPIRATION]
                 ?: throw AccessTokenExpirationNotFoundException()
 
             return@map longValue.toLocalDateTime()
-        }
+        }.first()
 
-    override fun loadRefreshToken(): Flow<RefreshToken> =
+    override suspend fun loadRefreshToken(): RefreshToken =
         preferencesDataStore.data.map { preferences ->
             preferences[REFRESH_TOKEN] ?: throw RefreshTokenNotFoundException()
-        }
+        }.first()
 
-    override fun loadRefreshTokenExpiration(): Flow<RefreshTokenExpiration> =
+    override suspend fun loadRefreshTokenExpiration(): RefreshTokenExpiration =
         preferencesDataStore.data.map { preferences ->
             val longValue = preferences[REFRESH_TOKEN_EXPIRATION]
                 ?: throw RefreshTokenExpirationNotFoundException()
 
             return@map longValue.toLocalDateTime()
-        }
+        }.first()
 
     private companion object {
         val ACCESS_TOKEN = stringPreferencesKey("access-token")
