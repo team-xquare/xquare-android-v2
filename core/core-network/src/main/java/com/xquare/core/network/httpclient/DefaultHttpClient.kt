@@ -1,4 +1,4 @@
-package com.xquare.core.network
+package com.xquare.core.network.httpclient
 
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO

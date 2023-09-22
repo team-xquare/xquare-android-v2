@@ -1,5 +1,6 @@
-package com.xquare.core.network
+package com.xquare.core.network.httpclient
 
+import com.xquare.core.network.NetworkDiQualifier
 import io.ktor.client.HttpClient
 import org.koin.java.KoinJavaComponent.get
 
