@@ -9,16 +9,16 @@ import com.xquare.core.database.dao.meal.MealDaoAbs
 import com.xquare.core.database.entity.MealEntity
 
 @Database(
-    entities = [
-        MealEntity::class,
-    ],
-    version = 0,
-    exportSchema = false,
+	entities = [
+		MealEntity::class,
+	],
+	version = 0,
+	exportSchema = false,
 )
 @TypeConverters(
-    DateTypeConverters::class,
-    ListTypeConverters::class,
+	DateTypeConverters::class,
+	ListTypeConverters::class,
 )
 internal abstract class XquareDatabase : RoomDatabase() {
-    abstract val mealDao: MealDaoAbs
+	abstract val mealDao: MealDaoAbs
 }

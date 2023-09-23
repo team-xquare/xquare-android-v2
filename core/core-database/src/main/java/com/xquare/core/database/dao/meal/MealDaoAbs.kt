@@ -10,48 +10,47 @@ import org.joda.time.LocalDate
 
 @Dao
 internal abstract class MealDaoAbs : MealDao() {
-
-    @Query(
-        """
+	@Query(
+		"""
             SELECT * FROM tbl_meal;
         """,
-    )
-    abstract override fun findAll(): Flow<List<MealEntity>>
+	)
+	abstract override fun findAll(): Flow<List<MealEntity>>
 
-    @Upsert
-    abstract override fun upsert(entity: MealEntity)
+	@Upsert
+	abstract override fun upsert(entity: MealEntity)
 
-    @Delete
-    abstract override fun delete(entity: MealEntity)
+	@Delete
+	abstract override fun delete(entity: MealEntity)
 
-    @Query(
-        """
+	@Query(
+		"""
             DELETE FROM tbl_meal;
-        """
-    )
-    abstract override fun deleteAll()
+        """,
+	)
+	abstract override fun deleteAll()
 
-    @Query(
-        """
+	@Query(
+		"""
             SELECT * FROM tbl_meal
             WHERE date = :date;
         """,
-    )
-    abstract override fun findByDate(date: LocalDate): Flow<MealEntity>
+	)
+	abstract override fun findByDate(date: LocalDate): Flow<MealEntity>
 
-    @Query(
-        """
+	@Query(
+		"""
             SELECT * FROM tbl_meal
             WHERE strftime('%m', date) IS strftime('%m', :date);  
         """,
-    )
-    abstract override fun findMonthOfMealsByDate(date: LocalDate): Flow<MealEntity>
+	)
+	abstract override fun findMonthOfMealsByDate(date: LocalDate): Flow<MealEntity>
 
-    @Query(
-        """
+	@Query(
+		"""
             DELETE FROM tbl_meal
             WHERE date = :date;
         """,
-    )
-    abstract override fun deleteByDate(date: LocalDate)
+	)
+	abstract override fun deleteByDate(date: LocalDate)
 }

@@ -6,8 +6,8 @@ import kotlinx.coroutines.flow.Flow
 import org.joda.time.LocalDate
 
 internal class GetMealOfMonthUseCaseImpl(
-    private val mealRepository: MealRepository,
+	private val mealRepository: MealRepository,
 ) : GetMealOfMonthUseCase() {
-    override operator fun invoke(date: LocalDate): Flow<List<Meal>> =
-        mealRepository.getMealsOfMonth(date)
+	override operator fun invoke(date: LocalDate): Flow<List<Meal>> =
+		mealRepository.getMealsOfMonth(date)
 }

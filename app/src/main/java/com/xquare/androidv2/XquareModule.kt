@@ -14,59 +14,66 @@ import org.koin.core.module.Module
 import org.koin.dsl.module
 
 internal val xquareModule: Module
-    get() = module {
-        includes(
-            coreModule,
-            dataModule,
-            databaseModule,
-            dataStoreModule,
-            domainModule,
-            networkModule,
-        )
-    }
+	get() =
+		module {
+			includes(
+				coreModule,
+				dataModule,
+				databaseModule,
+				dataStoreModule,
+				domainModule,
+				networkModule,
+			)
+		}
 
 private val coreModule: Module
-    inline get() = module {
-        includes(
-            coreDatabaseModule,
-            coreDataStoreModule,
-            coreJwtModule,
-            coreNetworkModule,
-            coreProjectModule,
-        )
-    }
+	inline get() =
+		module {
+			includes(
+				coreDatabaseModule,
+				coreDataStoreModule,
+				coreJwtModule,
+				coreNetworkModule,
+				coreProjectModule,
+			)
+		}
 
 private val dataModule: Module
-    inline get() = module {
-        includes(
-            dataMealModule,
-        )
-    }
+	inline get() =
+		module {
+			includes(
+				dataMealModule,
+			)
+		}
 
 private val databaseModule: Module
-    inline get() = module {
-        includes(
-            databaseMealModule,
-        )
-    }
+	inline get() =
+		module {
+			includes(
+				databaseMealModule,
+			)
+		}
 
 private val dataStoreModule: Module
-    inline get() = module {
-        includes(
-            dataStoreMealModule,
-        )
-    }
+	inline get() =
+		module {
+			includes(
+				dataStoreMealModule,
+			)
+		}
 
 private val domainModule: Module
-    inline get() = module {
-        includes(
-            domainMealModule,
-        )
-    }
+	inline get() =
+		module {
+			includes(
+				domainMealModule,
+			)
+		}
 
 private val networkModule: Module
-    inline get() = module {
-        includes(
-            networkMealModule,
-        )
-    }
+	inline get() =
+		module {
+			includes(
+				networkMealModule,
+			)
+		}

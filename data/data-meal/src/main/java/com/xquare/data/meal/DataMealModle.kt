@@ -6,6 +6,7 @@ import org.koin.core.module.Module
 import org.koin.dsl.module
 
 val dataMealModule: Module
-    get() = module {
-        single<MealRepository> { MealRepositoryImpl(get(), get(), get()) }
-    }
+	get() =
+		module {
+			single<MealRepository> { MealRepositoryImpl(get(), get(), get()) }
+		}

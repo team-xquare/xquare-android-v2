@@ -9,23 +9,22 @@ import io.ktor.http.ContentType
 import io.ktor.http.contentType
 import io.ktor.serialization.kotlinx.json.json
 
-internal val defaultHttpClient = HttpClient(CIO) {
-    expectSuccess = true
+internal val defaultHttpClient =
+	HttpClient(CIO) {
+		expectSuccess = true
 
-    install(ContentNegotiation) { json() }
+		install(ContentNegotiation) { json() }
 
-    if (
-    /* is debug mode enabled */
-        true
-    ) {
-        install(Logging)
-    }
+		if (
+			// is debug mode enabled
+			true
+		) {
+			install(Logging)
+		}
 
-    defaultRequest {
-        contentType(ContentType.Application.Json)
-        /* base url */
-        /*
-        url()
-         */
-    }
-}
+		defaultRequest {
+			contentType(ContentType.Application.Json)
+			// base url
+			// url()
+		}
+	}
