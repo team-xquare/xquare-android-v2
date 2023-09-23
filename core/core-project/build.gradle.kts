@@ -49,4 +49,6 @@ dependencies {
     testImplementation(libs.koin.android.test)
 
     implementation(project(":core:core-di"))
+
+    implementation(project(":shared:shared-di"))
 }
