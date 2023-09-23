@@ -1,5 +1,5 @@
 [versions]
-agp = "8.2.0-alpha16"
+agp = "8.1.1"
 jodaAndroid = "2.12.5"
 datastore-preferences = "1.0.0"
 koin = "3.5.0"
@@ -15,8 +15,7 @@ lifecycle = "2.6.2"
 material = "1.9.0"
 constraintlayout = "2.1.4"
 material-compose = "1.1.1"
-navigation-fragment-ktx = "2.7.2"
-navigation-ui-ktx = "2.7.2"
+navigation = "2.7.3"
 room = "2.5.2"
 compose = "1.5.1"
 xquare-designSystem-android = "0.4.1"
@@ -58,8 +57,8 @@ ktor-serialization-gson = { module = "io.ktor:ktor-serialization-gson", version.
 ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation-fragment-ktx" }
-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation-ui-ktx" }
+navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
+navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
 xquare-designSystem-android = { module = "com.github.team-xquare:xquare-design-system-android", version.ref = "xquare-designSystem-android" }
 
 [plugins]
