@@ -5,8 +5,8 @@ import androidx.datastore.preferences.core.Preferences
 
 typealias PreferencesDataStore = DataStore<Preferences>
 
-typealias Dms = String
+internal typealias Dms = String
 
-typealias Xquare = Dms
+internal typealias Xquare = Dms
 
-typealias Android = Xquare
+internal typealias Android = Xquare
