@@ -1,6 +1,7 @@
 package com.xquare.core.project
 
 import com.xquare.core.di.DiQualifier
+import com.xquare.core.project.build.BuildType
 import org.koin.core.module.Module
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
@@ -13,5 +14,9 @@ val coreProjectModule: Module
     get() = module {
         single<Boolean>(qualifier = ProjectDiQualifier.IS_DEBUG_ENABLED) {
             BuildConfig.DEBUG
+        }
+        single<BuildType> {
+            val value = BuildConfig.BUILD_TYPE
+            BuildType.fromString(value)
         }
     }
