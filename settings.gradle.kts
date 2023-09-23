@@ -29,6 +29,7 @@ include(":core:core-di")
 include(":core:core-domain")
 include(":core:core-jwt")
 include(":core:core-network")
+include(":core:core-project")
 
 // data
 include(":data:data-meal")
