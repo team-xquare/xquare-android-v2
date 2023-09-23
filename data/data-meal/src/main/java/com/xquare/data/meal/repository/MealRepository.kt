@@ -6,6 +6,7 @@ import kotlinx.coroutines.flow.Flow
 import org.joda.time.LocalDate
 
 abstract class MealRepository : Repository() {
-    abstract fun getMealOfDay(date: LocalDate): Flow<Meal>
-    abstract fun getMealsOfMonth(date: LocalDate): Flow<List<Meal>>
+	abstract fun getMealOfDay(date: LocalDate): Flow<Meal>
+
+	abstract fun getMealsOfMonth(date: LocalDate): Flow<List<Meal>>
 }
