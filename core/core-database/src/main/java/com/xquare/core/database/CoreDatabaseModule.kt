@@ -7,18 +7,20 @@ import org.koin.core.module.Module
 import org.koin.dsl.module
 
 val coreDatabaseModule: Module
-    get() = module {
-        includes(daoModule)
-        single<XquareDatabase> {
-            Room.databaseBuilder(
-                context = androidContext(),
-                klass = XquareDatabase::class.java,
-                name = "database-xquare",
-            ).build()
-        }
-    }
+	get() =
+		module {
+			includes(daoModule)
+			single<XquareDatabase> {
+				Room.databaseBuilder(
+					context = androidContext(),
+					klass = XquareDatabase::class.java,
+					name = "database-xquare",
+				).build()
+			}
+		}
 
 private val daoModule: Module
-    inline get() = module {
-        single<MealDao> { get<XquareDatabase>().mealDao }
-    }
+	inline get() =
+		module {
+			single<MealDao> { get<XquareDatabase>().mealDao }
+		}

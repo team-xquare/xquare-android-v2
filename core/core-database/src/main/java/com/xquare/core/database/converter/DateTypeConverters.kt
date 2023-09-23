@@ -8,16 +8,15 @@ import org.joda.time.LocalDate
 import org.joda.time.LocalDateTime
 
 internal class DateTypeConverters {
+	@TypeConverter
+	fun localDateToLong(value: LocalDate): Long = value.toEpochMillis()
 
-    @TypeConverter
-    fun localDateToLong(value: LocalDate): Long = value.toEpochMillis()
+	@TypeConverter
+	fun longToLocalDate(value: Long): LocalDate = value.toLocalDate()
 
-    @TypeConverter
-    fun longToLocalDate(value: Long): LocalDate = value.toLocalDate()
+	@TypeConverter
+	fun localDateTimeToLong(value: LocalDateTime): Long = value.toEpochMillis()
 
-    @TypeConverter
-    fun localDateTimeToLong(value: LocalDateTime): Long = value.toEpochMillis()
-
-    @TypeConverter
-    fun longToLocalDateTime(value: Long): LocalDateTime = value.toLocalDateTime()
+	@TypeConverter
+	fun longToLocalDateTime(value: Long): LocalDateTime = value.toLocalDateTime()
 }

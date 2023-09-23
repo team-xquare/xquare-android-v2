@@ -1,19 +1,19 @@
 @file:Suppress("UnstableApiUsage")
 
 pluginManagement {
-    repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
-    }
+	repositories {
+		google()
+		mavenCentral()
+		gradlePluginPortal()
+	}
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
-        maven { setUrl("https://jitpack.io") }
-    }
+	repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+	repositories {
+		google()
+		mavenCentral()
+		maven { setUrl("https://jitpack.io") }
+	}
 }
 
 rootProject.name = "XQUARE Android v2"
@@ -58,3 +58,4 @@ include(":network:network-user")
 // shared
 include(":shared:shared-alias")
 include(":shared:shared-date")
+include(":shared:shared-di")

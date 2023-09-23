@@ -5,6 +5,7 @@ import org.koin.core.module.Module
 import org.koin.dsl.module
 
 val coreDataStoreModule: Module
-    get() = module {
-        single<PreferencesDataStore> { androidContext().preferencesDataStore }
-    }
+	get() =
+		module {
+			single<PreferencesDataStore> { androidContext().preferencesDataStore }
+		}

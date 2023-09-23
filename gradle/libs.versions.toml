@@ -20,6 +20,7 @@ room = "2.5.2"
 compose = "1.5.1"
 xquare-designSystem-android = "0.4.1"
 ksp = "1.8.21-1.0.11"
+ktlint = "11.6.0"
 
 [libraries]
 joda-android = { module = "net.danlew:android.joda", version.ref = "jodaAndroid" }
@@ -67,3 +68,4 @@ androidLibrary = { id = "com.android.library", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }

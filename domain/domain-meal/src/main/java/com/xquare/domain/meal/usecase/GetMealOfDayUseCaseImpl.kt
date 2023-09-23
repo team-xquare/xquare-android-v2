@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 import org.joda.time.LocalDate
 
 internal class GetMealOfDayUseCaseImpl(
-    private val mealRepository: MealRepository,
+	private val mealRepository: MealRepository,
 ) : GetMealOfDayUseCase() {
-    override operator fun invoke(date: LocalDate): Flow<Meal> = mealRepository.getMealOfDay(date)
+	override operator fun invoke(date: LocalDate): Flow<Meal> = mealRepository.getMealOfDay(date)
 }

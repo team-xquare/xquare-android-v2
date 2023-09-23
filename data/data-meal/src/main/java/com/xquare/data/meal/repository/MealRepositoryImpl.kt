@@ -8,15 +8,15 @@ import kotlinx.coroutines.flow.Flow
 import org.joda.time.LocalDate
 
 internal class MealRepositoryImpl(
-    private val mealDatabaseDataSource: MealDatabaseDataSource,
-    private val mealDataStoreDataSource: MealDataStoreDataSource,
-    private val mealNetworkDataSource: MealNetworkDataSource,
+	private val mealDatabaseDataSource: MealDatabaseDataSource,
+	private val mealDataStoreDataSource: MealDataStoreDataSource,
+	private val mealNetworkDataSource: MealNetworkDataSource,
 ) : MealRepository() {
-    override fun getMealOfDay(date: LocalDate): Flow<Meal> {
-        TODO("Not yet implemented")
-    }
+	override fun getMealOfDay(date: LocalDate): Flow<Meal> {
+		TODO("Not yet implemented")
+	}
 
-    override fun getMealsOfMonth(date: LocalDate): Flow<List<Meal>> {
-        TODO("Not yet implemented")
-    }
+	override fun getMealsOfMonth(date: LocalDate): Flow<List<Meal>> {
+		TODO("Not yet implemented")
+	}
 }

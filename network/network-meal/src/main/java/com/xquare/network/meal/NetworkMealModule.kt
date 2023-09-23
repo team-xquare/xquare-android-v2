@@ -8,7 +8,8 @@ import org.koin.core.module.Module
 import org.koin.dsl.module
 
 val networkMealModule: Module
-    get() = module {
-        single<MealNetworkDataSource> { MealNetworkDataSourceImpl(get()) }
-        single<MealNetworkService> { MealNetworkServiceImpl(get()) }
-    }
+	get() =
+		module {
+			single<MealNetworkDataSource> { MealNetworkDataSourceImpl(get()) }
+			single<MealNetworkService> { MealNetworkServiceImpl(get()) }
+		}

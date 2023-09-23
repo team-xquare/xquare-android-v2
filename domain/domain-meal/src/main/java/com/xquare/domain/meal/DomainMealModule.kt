@@ -8,7 +8,8 @@ import org.koin.core.module.Module
 import org.koin.dsl.module
 
 val domainMealModule: Module
-    get() = module {
-        single<GetMealOfDayUseCase> { GetMealOfDayUseCaseImpl(get()) }
-        single<GetMealOfMonthUseCase> { GetMealOfMonthUseCaseImpl(get()) }
-    }
+	get() =
+		module {
+			single<GetMealOfDayUseCase> { GetMealOfDayUseCaseImpl(get()) }
+			single<GetMealOfMonthUseCase> { GetMealOfMonthUseCaseImpl(get()) }
+		}
