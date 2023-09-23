@@ -8,7 +8,8 @@ import org.koin.core.module.Module
 import org.koin.dsl.module
 
 val dataStoreMealModule: Module
-    get() = module {
-        single<MealDataStoreDataSource> { MealDataStoreDataSourceImpl(get()) }
-        single<MealDataStoreService> { MealDataStoreServiceImpl(get()) }
-    }
+	get() =
+		module {
+			single<MealDataStoreDataSource> { MealDataStoreDataSourceImpl(get()) }
+			single<MealDataStoreService> { MealDataStoreServiceImpl(get()) }
+		}
