@@ -6,5 +6,5 @@ import kotlinx.coroutines.flow.Flow
 import org.joda.time.LocalDate
 
 abstract class GetMealOfDayUseCase : UseCase() {
-    abstract operator fun invoke(date: LocalDate): Flow<Meal>
+	abstract operator fun invoke(date: LocalDate): Flow<Meal>
 }
