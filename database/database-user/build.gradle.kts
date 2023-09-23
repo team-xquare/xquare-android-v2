@@ -40,10 +40,20 @@ dependencies {
 
 	implementation(libs.core.ktx)
 	implementation(libs.appcompat)
-	implementation(libs.material)
+
+	implementation(libs.androidx.room.runtime)
+	implementation(libs.androidx.room.ktx)
+	ksp(libs.androidx.room.compiler)
+	testImplementation(libs.androidx.room.testing)
+
+	implementation(libs.joda.android)
 	testImplementation(libs.junit)
 	androidTestImplementation(libs.androidx.test.ext.junit)
 	androidTestImplementation(libs.espresso.core)
+
+	implementation(libs.koin.android)
+	implementation(libs.koin.android.compat)
+	testImplementation(libs.koin.android.test)
 
 	implementation(project(":core:core-database"))
 	implementation(project(":core:core-datasource"))
