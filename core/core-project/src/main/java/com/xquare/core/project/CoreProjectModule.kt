@@ -16,7 +16,6 @@ val coreProjectModule: Module
             BuildConfig.DEBUG
         }
         single<BuildType> {
-            val value = BuildConfig.BUILD_TYPE
-            BuildType.fromString(value)
+            BuildType.fromString(BuildConfig.BUILD_TYPE)
         }
     }
