@@ -35,13 +35,13 @@ android {
 dependencies {
 
     implementation(libs.core.ktx)
+
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.espresso.core)
     implementation(libs.appcompat)
 
     implementation(libs.koin.android)
     implementation(libs.koin.android.compat)
     testImplementation(libs.koin.android.test)
-
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
 }
