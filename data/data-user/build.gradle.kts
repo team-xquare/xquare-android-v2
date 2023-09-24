@@ -48,6 +48,9 @@ dependencies {
 	implementation(libs.koin.android.compat)
 	testImplementation(libs.koin.android.test)
 
+	implementation(project(":core:core-data"))
+	implementation(project(":core:core-domain"))
+
 	implementation(project(":database:database-user"))
 
 	implementation(project(":datastore:datastore-user"))
