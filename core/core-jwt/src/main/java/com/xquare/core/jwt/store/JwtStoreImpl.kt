@@ -26,11 +26,12 @@ import kotlinx.coroutines.runBlocking
 internal class JwtStoreImpl(
 	private val preferencesDataStore: PreferencesDataStore,
 ) : JwtStore() {
-	override fun loadAccessToken(): AccessToken = runBlocking {
-		preferencesDataStore.data.map { preferences ->
-			preferences[ACCESS_TOKEN] ?: throw AccessTokenNotFoundException()
-		}.first()
-	}
+	override fun loadAccessToken(): AccessToken =
+		runBlocking {
+			preferencesDataStore.data.map { preferences ->
+				preferences[ACCESS_TOKEN] ?: throw AccessTokenNotFoundException()
+			}.first()
+		}
 
 	override suspend fun storeAccessToken(token: AccessToken) {
 		transform(
@@ -43,14 +44,16 @@ internal class JwtStoreImpl(
 		)
 	}
 
-	override fun loadAccessTokenExpiration(): AccessTokenExpiration = runBlocking {
-		preferencesDataStore.data.map { preferences ->
-			val longValue = preferences[ACCESS_TOKEN_EXPIRATION]
-				?: throw AccessTokenExpirationNotFoundException()
+	override fun loadAccessTokenExpiration(): AccessTokenExpiration =
+		runBlocking {
+			preferencesDataStore.data.map { preferences ->
+				val longValue =
+					preferences[ACCESS_TOKEN_EXPIRATION]
+						?: throw AccessTokenExpirationNotFoundException()
 
-			return@map longValue.toLocalDateTime()
-		}.first()
-	}
+				return@map longValue.toLocalDateTime()
+			}.first()
+		}
 
 	override suspend fun storeAccessTokenExpiration(expiration: AccessTokenExpiration) {
 		transform(
@@ -63,11 +66,12 @@ internal class JwtStoreImpl(
 		)
 	}
 
-	override fun loadRefreshToken(): RefreshToken = runBlocking {
-		preferencesDataStore.data.map { preferences ->
-			preferences[REFRESH_TOKEN] ?: throw RefreshTokenNotFoundException()
-		}.first()
-	}
+	override fun loadRefreshToken(): RefreshToken =
+		runBlocking {
+			preferencesDataStore.data.map { preferences ->
+				preferences[REFRESH_TOKEN] ?: throw RefreshTokenNotFoundException()
+			}.first()
+		}
 
 	override suspend fun storeRefreshToken(token: RefreshToken) {
 		transform(
@@ -80,14 +84,16 @@ internal class JwtStoreImpl(
 		)
 	}
 
-	override fun loadRefreshTokenExpiration(): RefreshTokenExpiration = runBlocking {
-		preferencesDataStore.data.map { preferences ->
-			val longValue = preferences[REFRESH_TOKEN_EXPIRATION]
-				?: throw RefreshTokenExpirationNotFoundException()
+	override fun loadRefreshTokenExpiration(): RefreshTokenExpiration =
+		runBlocking {
+			preferencesDataStore.data.map { preferences ->
+				val longValue =
+					preferences[REFRESH_TOKEN_EXPIRATION]
+						?: throw RefreshTokenExpirationNotFoundException()
 
-			return@map longValue.toLocalDateTime()
-		}.first()
-	}
+				return@map longValue.toLocalDateTime()
+			}.first()
+		}
 
 	override suspend fun storeRefreshTokenExpiration(expiration: RefreshTokenExpiration) {
 		transform(
